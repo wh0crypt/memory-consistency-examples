@@ -1,7 +1,7 @@
 # Memory Consistency Examples
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![C++ Standard](https://img.shields.io/badge/C%2B%2B-23-blue.svg)](https://en.cppreference.com/w/cpp/23)
+[![C++ Standard](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://en.cppreference.com/w/cpp/20)
 
 A educational project for **Computer Architecture** at the **University of La Laguna (ULL)**. This repository demonstrates the critical impact of memory consistency models, compiler reordering, and CPU out-of-order execution on multithreaded synchronization.
 
@@ -27,7 +27,7 @@ This project provides two comparative examples:
 ### Prerequisites
 
 * **CMake** (version 3.16 or higher)
-* **C++23 Compatible Compiler** (GCC 13+, Clang 15+)
+* **C++20 Compatible Compiler** (GCC 10.1+, Clang 11.0+)
 * **Address Sanitizer (ASan)**: Highly recommended for detecting memory issues.
 
 ### Compilation
@@ -53,7 +53,7 @@ To truly understand the hardware interaction, examine the generated assembly cod
 
 * **Doxygen Documentation**: All source files include standard-compliant headers and technical notes.
 * **I/O Optimizations**: Uses `sync_with_stdio(false)` to minimize *Observer Effect*.
-* **Modern C++ Practices**: Utilizes C++23 standards, brace initialization, and `std::this_thread::yield()` for efficient spin-locks.
+* **Modern C++ Practices**: Utilizes C++20 standards, brace initialization, and `std::this_thread::yield()` for efficient spin-locks.
 
 ---
 

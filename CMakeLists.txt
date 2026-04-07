@@ -1,6 +1,6 @@
 # University of La Laguna
 # Higher School of Engineering and Technology
-# Project: MemoryConsistencyExamples
+# Project: Memory Consistency Examples
 # @file CMakeLists.txt
 # @author Domenico Goya (wh0crypt@computer.org)
 # @brief Directives to compile the examples.

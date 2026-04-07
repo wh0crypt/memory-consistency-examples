@@ -1,7 +1,7 @@
 /**
  * University of La Laguna
  * Higher School of Engineering and Technology
- * Project: MemoryConsistencyExamples
+ * Project: Memory Consistency Examples
  * @file relaxed_ordering.cpp
  * @author Domenico Goya (wh0crypt@computer.org)
  * @brief Demonstration of memory reordering risks using relaxed atomics.
@@ -12,6 +12,7 @@
  * 
  * @version 0.1
  * @date 2026-04-07
+ * @copyright Copyright (c) 2026 Domenico Goya (wh0crypt)
  */
 
 #include <atomic>

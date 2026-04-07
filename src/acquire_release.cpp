@@ -1,7 +1,7 @@
 /**
  * University of La Laguna
  * Higher School of Engineering and Technology
- * Project: MemoryConsistencyExamples
+ * Project: Memory Consistency Examples
  * @file acquire_release.cpp
  * @author Domenico Goya (wh0crypt@computer.org)
  * @brief Demonstration of Acquire/Release memory semantics.
@@ -12,7 +12,7 @@
  * 
  * @version 1.0
  * @date 2026-04-07
- * @copyright Copyright (c) 2026 Domenico Goya
+ * @copyright Copyright (c) 2026 Domenico Goya (wh0crypt)
  */
 
 #include <atomic>

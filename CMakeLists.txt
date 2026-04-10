@@ -11,9 +11,12 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(MemoryConsistencyExamples 
-        VERSION 1.0 
+        VERSION 1.0
         DESCRIPTION "Examples of Memory Fences and Peterson's Algorithm"
-        LANGUAGES CXX)
+        LANGUAGES C CXX)
+
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED ON)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -25,10 +28,10 @@ else()
     set(COMMON_FLAGS 
         -O2 -Wall -Wextra -Wpedantic -Wshadow 
         -Wconversion -Wsign-conversion -Wnull-dereference
-        -fsanitize=address,undefined)
+        -fsanitize=address,undefined -masm=intel)
 endif()
 
-file(GLOB_RECURSE SOURCE_FILES "src/*.cpp")
+file(GLOB_RECURSE SOURCE_FILES "src/*.cpp" "src/*.c")
 
 foreach(SOURCE_FILE ${SOURCE_FILES})
     get_filename_component(EXE_NAME ${SOURCE_FILE} NAME_WE)
@@ -38,6 +41,7 @@ foreach(SOURCE_FILE ${SOURCE_FILES})
     if(NOT MSVC)
         target_link_options(${EXE_NAME} PRIVATE -fsanitize=address,undefined)
     endif()
-    
-    message(STATUS "Created executable: ${EXE_NAME}")
+
+    get_filename_component(FILE_EXT ${SOURCE_FILE} EXT)
+    message(STATUS "Created executable: ${EXE_NAME} [LANG: ${FILE_EXT}]")
 endforeach()
